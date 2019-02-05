@@ -20,10 +20,10 @@ On the CAD Integration Side:
 2. use following example java code to call a CAD Process from the OSGi:
 
 
-    PlmRequest request = new PlmRequest("osgi.process.OptionDialogProcess");
-    request.getParameters().addOption("DIALOG_MESSAGE","Are you sure that you sure?");
-    request.getParameters().addOption("DIALOG_TITLE", "Its' all only for your own safety");
-    request.getParameters().addOption("DIALOG_OPTION_TYPE","1"); //1 = YES NO CANCEL
-    request.getParameters().addOption("DIALOG_MESSAGE_TYPE","3"); //3 = QUESTION
-    PlmResponse response = conn.callPlmProcess(request);
+PlmRequest request = new PlmRequest("osgi.process.OptionDialogProcess");
+request.getParameters().addOption("DIALOG_MESSAGE","Are you sure that you sure?");
+request.getParameters().addOption("DIALOG_TITLE", "Its' all only for your own safety");
+request.getParameters().addOption("DIALOG_OPTION_TYPE","1"); //1 = YES NO CANCEL
+request.getParameters().addOption("DIALOG_MESSAGE_TYPE","3"); //3 = QUESTION
+PlmResponse response = conn.callPlmProcess(request);
 	
